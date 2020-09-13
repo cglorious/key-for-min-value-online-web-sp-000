@@ -14,7 +14,7 @@ def off_limits_key_for_min_value(name_hash)
   min_key #[return key]
 end
 
-def key_for_min_value(name_hash)
+def working_key_for_min_value(name_hash)
   array = name_hash.collect do |key, value|
     value
   end
