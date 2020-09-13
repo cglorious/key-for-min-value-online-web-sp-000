@@ -3,20 +3,19 @@
 
 def key_for_min_value(name_hash)
   if name_hash == {}
-    return nil
+    nil
   else
     array = name_hash.collect do |key, value|
       value
     end #[array of values]
+
+    min_value = array.min { |a,b| a <=> b} #[min value in array]
+
+    min_key = name_hash.each do |key, value|
+      return key if value == min_value #[return key if the value is the same]
+    end
+    min_key #[return key]
   end
-
-  min_value = array.min { |a,b| a <=> b} #[min value in array]
-
-  min_key = name_hash.each do |key, value|
-    return key if value == min_value #[return key if the value is the same]
-  end
-  min_key #[return key]
-
 end
 
 #def working_key_for_min_value(name_hash)
