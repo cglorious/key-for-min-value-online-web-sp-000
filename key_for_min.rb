@@ -4,12 +4,12 @@
 def off_limits_key_for_min_value(name_hash)
   array = name_hash.collect do |key, value|
     value
-  end
+  end #[array of values]
 
-  min_value = array.min { |a,b| a <=> b}
+  min_value = array.min { |a,b| a <=> b} #[min value in array]
 
   min_key = name_hash.each do |key, value|
-    return key if value == min_value
+    return key if value == min_value #[the key if the value is the same]
   end
   min_key
 end
