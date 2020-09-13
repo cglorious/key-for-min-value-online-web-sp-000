@@ -22,7 +22,10 @@ def key_for_min_value(name_hash)
 
   #iterate through the array
   array.each do |num|
-    if array[0] == num || array[0] > num
+    sorted_array = []
+    if array[0] == num
+
+      array[0] > num
 
     else array[0] < num
       i++
