@@ -5,6 +5,7 @@ def off_limits_key_for_min_value(name_hash)
   array = name_hash.collect do |key, value|
     value
   end
+
   min_value = array.min { |a,b| a <=> b}
 
   min_key = name_hash.each do |key, value|
