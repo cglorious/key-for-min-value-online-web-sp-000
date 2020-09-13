@@ -21,10 +21,14 @@ def key_for_min_value(name_hash)
   array #[1,2,3]
 
   #iterate through the array
-  array.each do |num|
+  array.collect do |num|
+    first_value = array[0]
     sorted_array = []
-    if array[0] == num
+
+    if first_value > num
+    elsif first_value < num
       sorted_array << num
+    elsif
       array[0] > num
 
     else array[0] < num
