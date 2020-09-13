@@ -24,11 +24,11 @@ def key_for_min_value(name_hash)
   array.each do |num|
     sorted_array = []
     if array[0] == num
-
+      sorted_array << num
       array[0] > num
 
     else array[0] < num
-      i++
+
   #determine which value is the lowest
   #compare values while iterating
 
