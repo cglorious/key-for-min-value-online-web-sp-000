@@ -5,12 +5,10 @@ def key_for_min_value(name_hash)
   array = name_hash.collect do |key, value|
     value
   end #[500,2,1]
-  max = array.max { |a,b| a <=> b} #[500]
+  max_value = array.max { |a,b| a <=> b} #[500]
 
-  name_hash.each do |key, value|
-    if value == max
-      key
-    end
+  max_key = name_hash.each do |key, value|
+    return key if value == max_value
   end
-  #return key*
+  max_key
 end
