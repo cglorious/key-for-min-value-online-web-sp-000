@@ -9,9 +9,9 @@ def off_limits_key_for_min_value(name_hash)
   min_value = array.min { |a,b| a <=> b} #[min value in array]
 
   min_key = name_hash.each do |key, value|
-    return key if value == min_value #[the key if the value is the same]
+    return key if value == min_value #[return key if the value is the same]
   end
-  min_key
+  min_key #[return key]
 end
 
 def key_for_min_value(name_hash)
